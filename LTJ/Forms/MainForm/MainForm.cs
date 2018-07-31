@@ -19,7 +19,7 @@ namespace LTJ
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Core.XML.LOL();
+
         }
 
         private void FinanseForm_Click(object sender, EventArgs e)

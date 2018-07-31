@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+
 
 namespace LTJ.Core
 {
     static public class XML
     {
-        static public void LOL()
+        static public void CreateXMLFilesFinance()
         {
-            
+            XDocument xdoc = new XDocument(new XElement("Finance", new XElement("Have"),new XElement("Target"),new XElement("Bank")));
+            xdoc.Save(Path.FinanceXMLPath());
         }
     }
 }

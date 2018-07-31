@@ -16,5 +16,13 @@ namespace LTJ.Core
         {
             return Environment.CurrentDirectory.ToString() + "\\Data";
         }
+        static public string FinancePath()
+        {
+            return Environment.CurrentDirectory.ToString() + "\\Data\\Finance";
+        }
+        static public string FinanceXMLPath()
+        {
+            return Environment.CurrentDirectory.ToString() + "\\Data\\Finance\\DataBase.xml";
+        }
     }
 }

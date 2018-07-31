@@ -15,10 +15,17 @@ namespace LTJ
         [STAThread]
         static private void Init() //инициализация
         {
-            if (Directory.Exists(Core.Path.DataPath())) //Если путь отсутствует Создать папку
+            if (!Directory.Exists(Core.Path.DataPath())) //Если путь отсутствует Создать папку
             {
                 Directory.CreateDirectory(Core.Path.DataPath());
                 Core.Core.MBInfo("Созданна папка \"Data\"");
+
+            }
+            if (!Directory.Exists(Core.Path.FinancePath()))//если путь отсутсвует Создать папку финансов и создать хмл
+            {
+                Directory.CreateDirectory(Core.Path.FinancePath());
+                Core.Core.MBInfo("Созданна папка \"Finance\"");
+                Core.XML.CreateXMLFilesFinance();
             }
 
         }

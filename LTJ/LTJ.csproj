@@ -47,11 +47,11 @@
     <Compile Include="Core\Core.cs" />
     <Compile Include="Core\Path.cs" />
     <Compile Include="Core\XML.cs" />
-    <Compile Include="Forms\FinanseForm\FinanseForm.cs">
+    <Compile Include="Forms\FinanceForm\FinanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FinanseForm\FinanseForm.Designer.cs">
-      <DependentUpon>FinanseForm.cs</DependentUpon>
+    <Compile Include="Forms\FinanceForm\FinanceForm.Designer.cs">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm\MainForm.cs">
       <SubType>Form</SubType>
@@ -61,8 +61,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FinanseForm\FinanseForm.resx">
-      <DependentUpon>FinanseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FinanceForm\FinanceForm.resx">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

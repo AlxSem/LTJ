@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LTJ
 {
-    public partial class Form1 : Form
+    public partial class FinanseForm : Form
     {
-        public Form1()
+        public FinanseForm()
         {
             InitializeComponent();
         }

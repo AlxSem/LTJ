@@ -33,11 +33,13 @@
             this.BeznalText = new System.Windows.Forms.Label();
             this.NalText = new System.Windows.Forms.Label();
             this.NowMoney = new System.Windows.Forms.Label();
+            this.AddMoney = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.AddMoney);
             this.panel1.Controls.Add(this.AllText);
             this.panel1.Controls.Add(this.BeznalText);
             this.panel1.Controls.Add(this.NalText);
@@ -83,6 +85,16 @@
             this.NowMoney.TabIndex = 0;
             this.NowMoney.Text = "Сейчас денег:";
             // 
+            // AddMoney
+            // 
+            this.AddMoney.Image = global::LTJ.Properties.Resources.add;
+            this.AddMoney.Location = new System.Drawing.Point(8, 102);
+            this.AddMoney.Name = "AddMoney";
+            this.AddMoney.Size = new System.Drawing.Size(32, 32);
+            this.AddMoney.TabIndex = 4;
+            this.AddMoney.UseVisualStyleBackColor = true;
+            this.AddMoney.Click += new System.EventHandler(this.AddMoney_Click);
+            // 
             // FinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.Label BeznalText;
         private System.Windows.Forms.Label NalText;
         private System.Windows.Forms.Label NowMoney;
+        private System.Windows.Forms.Button AddMoney;
     }
 }

@@ -12,9 +12,14 @@ namespace LTJ
 {
     public partial class FinanceForm : Form
     {
+        public static FinanceForm SelfRef
+        {
+            get; set;
+        }
         public FinanceForm()
         {
             InitializeComponent();
+            SelfRef = this;
         }
 
         private void Finance_Load(object sender, EventArgs e)
@@ -22,7 +27,7 @@ namespace LTJ
             Reload();
         }
 
-        private void Reload()
+         public void Reload()
         {
             double nal = Core.XML.LoadMoneyNal;
             double beznal = Core.XML.LoadMoneyBeznal;
@@ -30,6 +35,14 @@ namespace LTJ
             NalText.Text = "Наличными: " + nal.ToString();
             BeznalText.Text = "Безналичными: " + beznal.ToString();
             AllText.Text = "Всего: " + all.ToString();
+        }
+        static void ReloadPub()
+        {
+            Reload();
+        }
+        private void AddMoney_Click(object sender, EventArgs e)
+        {
+            Forms.FinanceForm.AddMoneyForm addMoneyForm = new Forms.FinanceForm.AddMoneyForm();
         }
     }
 }

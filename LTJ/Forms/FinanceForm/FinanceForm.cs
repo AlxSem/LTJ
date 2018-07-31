@@ -10,35 +10,26 @@ using System.Windows.Forms;
 
 namespace LTJ
 {
-    public partial class FinanseForm : Form
+    public partial class FinanceForm : Form
     {
-        private Panel panel1;
-
-        public FinanseForm()
+        public FinanceForm()
         {
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+        private void Finance_Load(object sender, EventArgs e)
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 106);
-            this.panel1.TabIndex = 0;
-            // 
-            // FinanseForm
-            // 
-            this.ClientSize = new System.Drawing.Size(645, 396);
-            this.Controls.Add(this.panel1);
-            this.Name = "FinanseForm";
-            this.Text = "Ой! Денюжки?";
-            this.ResumeLayout(false);
+            Reload();
+        }
 
+        private void Reload()
+        {
+            double nal = Core.XML.LoadMoneyNal();
+            double beznal = Core.XML.LoadMoneyBeznal();
+            double all = nal + beznal;
+            NalText.Text = "Наличными: " + nal.ToString();
+            BeznalText.Text = "Безналичными: " + beznal.ToString();
+            AllText.Text = "Всего: " + all.ToString();
         }
     }
 }

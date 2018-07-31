@@ -24,7 +24,7 @@ namespace LTJ
 
         private void FinanseForm_Click(object sender, EventArgs e)
         {
-            FinanseForm Finance = new FinanseForm();
+            FinanceForm Finance = new FinanceForm();
             Finance.Show();
         }
     }

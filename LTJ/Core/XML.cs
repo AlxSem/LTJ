@@ -12,7 +12,10 @@ namespace LTJ.Core
     {
         static public void CreateXMLFilesFinance()
         {
-            XDocument xdoc = new XDocument(new XElement("Finance", new XElement("Have"),new XElement("Target"),new XElement("Bank")));
+            XDocument xdoc = new XDocument(new XElement("Finance",
+                new XElement("Have", new XElement("Beznal", 0), new XElement("Nal", 0)),
+                new XElement("Target"), 
+                new XElement("Bank")));
             xdoc.Save(Path.FinanceXMLPath());
         }
     }

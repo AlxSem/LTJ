@@ -24,8 +24,8 @@ namespace LTJ
 
         private void Reload()
         {
-            double nal = Core.XML.LoadMoneyNal();
-            double beznal = Core.XML.LoadMoneyBeznal();
+            double nal = Core.XML.LoadMoneyNal;
+            double beznal = Core.XML.LoadMoneyBeznal;
             double all = nal + beznal;
             NalText.Text = "Наличными: " + nal.ToString();
             BeznalText.Text = "Безналичными: " + beznal.ToString();

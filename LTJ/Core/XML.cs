@@ -27,15 +27,34 @@ namespace LTJ.Core
         #endregion Финансы
         #endregion Инициализация пустых XML
         #region Достаем данные
-        static public double LoadMoneyNal()
+        static public double LoadMoneyNal
         {
-            XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
-            return Convert.ToDouble(xdoc.Element("Finance").Element("Have").Element("Nal").Value.ToString());
-        }
-        static public double LoadMoneyBeznal()
+
+            get
+            {
+                XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
+                return Convert.ToDouble(xdoc.Element("Finance").Element("Have").Element("Nal").Value.ToString());
+            }
+            set
+            {
+                XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
+                Convert.ToDouble(xdoc.Element("Finance").Element("Have").Element("Nal").Value = value.ToString());
+                xdoc.Save(Path.FinanceXMLPath());
+            }
+           }
+        static public double LoadMoneyBeznal
         {
-            XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
-            return Convert.ToDouble(xdoc.Element("Finance").Element("Have").Element("Beznal").Value.ToString());
+            get
+            {
+                XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
+                return Convert.ToDouble(xdoc.Element("Finance").Element("Have").Element("Beznal").Value.ToString());
+            }
+            set
+            {
+                XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
+                Convert.ToDouble(xdoc.Element("Finance").Element("Have").Element("Beznal").Value = value.ToString());
+                xdoc.Save(Path.FinanceXMLPath());
+            }
         }
         #endregion Достаем данные
     }

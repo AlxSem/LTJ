@@ -44,7 +44,7 @@
             this.panel1.Controls.Add(this.NowMoney);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 106);
+            this.panel1.Size = new System.Drawing.Size(186, 143);
             this.panel1.TabIndex = 1;
             // 
             // AllText
@@ -83,13 +83,13 @@
             this.NowMoney.TabIndex = 0;
             this.NowMoney.Text = "Сейчас денег:";
             // 
-            // Finance
+            // FinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(651, 404);
             this.Controls.Add(this.panel1);
-            this.Name = "Finance";
+            this.Name = "FinanceForm";
             this.Text = "Finance";
             this.Load += new System.EventHandler(this.Finance_Load);
             this.panel1.ResumeLayout(false);

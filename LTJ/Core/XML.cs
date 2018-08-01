@@ -62,15 +62,17 @@ namespace LTJ.Core
         {
             XDocument xdox = XDocument.Load(Path.FinanceXMLPath());
             xdox.Element("Finance").Element("History")
-                .Add(new XElement("Day", DateTime.Today.ToShortDateString()),
+                .Add(new XElement("His",
+                new XElement("Day", DateTime.Today.ToShortDateString()),
                 new XElement("Description", Description),
                 new XElement("Note", Note),
                 new XElement("WasNal", wasNal),
                 new XElement("ThusNal", thusNal),
                 new XElement("WasBeznal", wasBeznal),
-                new XElement("ThusBeznal", thusBeznal));
+                new XElement("ThusBeznal", thusBeznal)));
             xdox.Save(Path.FinanceXMLPath());
         }
         #endregion История
+        
     }
 }

@@ -15,8 +15,10 @@ namespace LTJ.Forms.FinanceForm
         public AddMoneyForm()
         {
             InitializeComponent();
-        }
+           
 
+        }
+        
         private void Confirm_Click(object sender, EventArgs e)
         {
             double nalLoad = Core.XML.LoadMoneyNal;
@@ -27,10 +29,10 @@ namespace LTJ.Forms.FinanceForm
             nal += nalLoad;
             beznal += beznalLoad;
             Core.XML.AddHistory("Прибавка", note, nalLoad.ToString(), nal.ToString(), beznalLoad.ToString(), beznal.ToString());
-            if (LTJ.FinanceForm.SelfRef != null)
-            {
-                LTJ.FinanceForm.Reload();
-            }
+            Core.XML.LoadMoneyNal = nal;
+            Core.XML.LoadMoneyBeznal = beznal;
+            LTJ.FinanceForm main = this.Owner as LTJ.FinanceForm;
+            main.Reload();
         }
     }
 }

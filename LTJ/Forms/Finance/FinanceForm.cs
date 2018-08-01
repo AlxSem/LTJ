@@ -36,13 +36,13 @@ namespace LTJ
             BeznalText.Text = "Безналичными: " + beznal.ToString();
             AllText.Text = "Всего: " + all.ToString();
         }
-        static void ReloadPub()
-        {
-            Reload();
-        }
+
+        
         private void AddMoney_Click(object sender, EventArgs e)
         {
             Forms.FinanceForm.AddMoneyForm addMoneyForm = new Forms.FinanceForm.AddMoneyForm();
+            addMoneyForm.Owner = this;
+            addMoneyForm.ShowDialog();
         }
     }
 }

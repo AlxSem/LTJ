@@ -36,8 +36,8 @@ namespace LTJ.Forms.Finance
             double nal = Convert.ToDouble(NalTextBox.Text);
             double beznal = Convert.ToDouble(BeznalTextBox.Text);
             string note = NoteTextBox.Text;
-            nalLoad -= nal ;
-            beznalLoad -= beznal ;
+            nalLoad -= nal;
+            beznalLoad -= beznal;
             Core.XML.AddHistory("Убытие", note, nalLoad.ToString(), nal.ToString(), beznalLoad.ToString(), beznal.ToString());
             Core.XML.LoadMoneyNal = nalLoad;
             Core.XML.LoadMoneyBeznal = beznalLoad;

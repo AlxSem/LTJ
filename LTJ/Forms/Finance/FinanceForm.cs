@@ -42,7 +42,7 @@ namespace LTJ
 
         private void MinMoney_Click(object sender, EventArgs e)
         {
-            Forms.FinanceForm.AddMoneyForm minMoneyForm = new Forms.FinanceForm.AddMoneyForm();
+            Forms.Finance.MinMoneyForm minMoneyForm = new Forms.Finance.MinMoneyForm();
             minMoneyForm.Owner = this;
             minMoneyForm.ShowDialog();
         }

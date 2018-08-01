@@ -29,13 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MinMoney = new System.Windows.Forms.Button();
             this.AddMoney = new System.Windows.Forms.Button();
             this.AllText = new System.Windows.Forms.Label();
             this.BeznalText = new System.Windows.Forms.Label();
             this.NalText = new System.Windows.Forms.Label();
             this.NowMoney = new System.Windows.Forms.Label();
-            this.MinMoney = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ReservBank = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grnAllBankText = new System.Windows.Forms.Label();
+            this.usdBankText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,8 +56,18 @@
             this.panel1.Controls.Add(this.NowMoney);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 143);
+            this.panel1.Size = new System.Drawing.Size(190, 150);
             this.panel1.TabIndex = 1;
+            // 
+            // MinMoney
+            // 
+            this.MinMoney.Image = global::LTJ.Properties.Resources.add;
+            this.MinMoney.Location = new System.Drawing.Point(138, 102);
+            this.MinMoney.Name = "MinMoney";
+            this.MinMoney.Size = new System.Drawing.Size(32, 32);
+            this.MinMoney.TabIndex = 5;
+            this.MinMoney.UseVisualStyleBackColor = true;
+            this.MinMoney.Click += new System.EventHandler(this.MinMoney_Click);
             // 
             // AddMoney
             // 
@@ -99,27 +115,69 @@
             this.NowMoney.TabIndex = 0;
             this.NowMoney.Text = "Сейчас денег:";
             // 
-            // MinMoney
+            // panel2
             // 
-            this.MinMoney.Image = global::LTJ.Properties.Resources.add;
-            this.MinMoney.Location = new System.Drawing.Point(138, 102);
-            this.MinMoney.Name = "MinMoney";
-            this.MinMoney.Size = new System.Drawing.Size(32, 32);
-            this.MinMoney.TabIndex = 5;
-            this.MinMoney.UseVisualStyleBackColor = true;
-            this.MinMoney.Click += new System.EventHandler(this.MinMoney_Click);
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.usdBankText);
+            this.panel2.Controls.Add(this.grnAllBankText);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.ReservBank);
+            this.panel2.Location = new System.Drawing.Point(218, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(190, 150);
+            this.panel2.TabIndex = 2;
+            // 
+            // ReservBank
+            // 
+            this.ReservBank.AutoSize = true;
+            this.ReservBank.Location = new System.Drawing.Point(12, 80);
+            this.ReservBank.Name = "ReservBank";
+            this.ReservBank.Size = new System.Drawing.Size(62, 13);
+            this.ReservBank.TabIndex = 0;
+            this.ReservBank.Text = "В резерве ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Сейчас денег в банке:";
+            // 
+            // grnAllBankText
+            // 
+            this.grnAllBankText.AutoSize = true;
+            this.grnAllBankText.Location = new System.Drawing.Point(10, 32);
+            this.grnAllBankText.Name = "grnAllBankText";
+            this.grnAllBankText.Size = new System.Drawing.Size(57, 13);
+            this.grnAllBankText.TabIndex = 2;
+            this.grnAllBankText.Text = "В гривнах";
+            // 
+            // usdBankText
+            // 
+            this.usdBankText.AutoSize = true;
+            this.usdBankText.Location = new System.Drawing.Point(10, 55);
+            this.usdBankText.Name = "usdBankText";
+            this.usdBankText.Size = new System.Drawing.Size(64, 13);
+            this.usdBankText.TabIndex = 3;
+            this.usdBankText.Text = "В долларах";
             // 
             // FinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 404);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FinanceForm";
             this.Text = "Finance";
             this.Load += new System.EventHandler(this.Finance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -133,5 +191,10 @@
         private System.Windows.Forms.Label NowMoney;
         private System.Windows.Forms.Button AddMoney;
         private System.Windows.Forms.Button MinMoney;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label usdBankText;
+        private System.Windows.Forms.Label grnAllBankText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ReservBank;
     }
 }

@@ -30,6 +30,12 @@ namespace LTJ
             NalText.Text = "Наличными: " + nal.ToString();
             BeznalText.Text = "Безналичными: " + beznal.ToString();
             AllText.Text = "Всего: " + all.ToString();
+            double UAN = Core.XML.LoadBankUAN;
+            double USD = Core.XML.LoadBankUSD;
+            double Reserv = Core.XML.LoadBankReserv;
+            grnAllBankText.Text = "В гривнах: " + UAN.ToString();
+            usdBankText.Text = "В долларах : " + USD.ToString();
+            ReservBank.Text = "В резерве : " + Reserv.ToString();
         }
 
         
@@ -38,6 +44,7 @@ namespace LTJ
             Forms.FinanceForm.AddMoneyForm addMoneyForm = new Forms.FinanceForm.AddMoneyForm();
             addMoneyForm.Owner = this;
             addMoneyForm.ShowDialog();
+
         }
 
         private void MinMoney_Click(object sender, EventArgs e)

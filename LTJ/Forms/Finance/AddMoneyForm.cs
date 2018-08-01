@@ -21,6 +21,18 @@ namespace LTJ.Forms.FinanceForm
         
         private void Confirm_Click(object sender, EventArgs e)
         {
+            if(NalTextBox.Text == String.Empty)
+            {
+                NalTextBox.Text = 0.ToString();
+            }
+            if(BeznalTextBox.Text == String.Empty)
+            {
+                BeznalTextBox.Text = 0.ToString();
+            }
+            if(NoteTextBox.Text == String.Empty)
+            {
+                NoteTextBox.Text = "None";
+            }
             double nalLoad = Core.XML.LoadMoneyNal;
             double beznalLoad = Core.XML.LoadMoneyBeznal;
             double nal = Convert.ToDouble(NalTextBox.Text);
@@ -33,6 +45,7 @@ namespace LTJ.Forms.FinanceForm
             Core.XML.LoadMoneyBeznal = beznal;
             LTJ.FinanceForm main = this.Owner as LTJ.FinanceForm;
             main.Reload();
+            this.Close();
         }
     }
 }

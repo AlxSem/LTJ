@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AddMoney = new System.Windows.Forms.Button();
             this.AllText = new System.Windows.Forms.Label();
             this.BeznalText = new System.Windows.Forms.Label();
             this.NalText = new System.Windows.Forms.Label();
             this.NowMoney = new System.Windows.Forms.Label();
-            this.AddMoney = new System.Windows.Forms.Button();
+            this.MinMoney = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.MinMoney);
             this.panel1.Controls.Add(this.AddMoney);
             this.panel1.Controls.Add(this.AllText);
             this.panel1.Controls.Add(this.BeznalText);
@@ -48,6 +52,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(186, 143);
             this.panel1.TabIndex = 1;
+            // 
+            // AddMoney
+            // 
+            this.AddMoney.Image = global::LTJ.Properties.Resources.add;
+            this.AddMoney.Location = new System.Drawing.Point(8, 102);
+            this.AddMoney.Name = "AddMoney";
+            this.AddMoney.Size = new System.Drawing.Size(32, 32);
+            this.AddMoney.TabIndex = 4;
+            this.AddMoney.UseVisualStyleBackColor = true;
+            this.AddMoney.Click += new System.EventHandler(this.AddMoney_Click);
             // 
             // AllText
             // 
@@ -85,15 +99,15 @@
             this.NowMoney.TabIndex = 0;
             this.NowMoney.Text = "Сейчас денег:";
             // 
-            // AddMoney
+            // MinMoney
             // 
-            this.AddMoney.Image = global::LTJ.Properties.Resources.add;
-            this.AddMoney.Location = new System.Drawing.Point(8, 102);
-            this.AddMoney.Name = "AddMoney";
-            this.AddMoney.Size = new System.Drawing.Size(32, 32);
-            this.AddMoney.TabIndex = 4;
-            this.AddMoney.UseVisualStyleBackColor = true;
-            this.AddMoney.Click += new System.EventHandler(this.AddMoney_Click);
+            this.MinMoney.Image = global::LTJ.Properties.Resources.add;
+            this.MinMoney.Location = new System.Drawing.Point(138, 102);
+            this.MinMoney.Name = "MinMoney";
+            this.MinMoney.Size = new System.Drawing.Size(32, 32);
+            this.MinMoney.TabIndex = 5;
+            this.MinMoney.UseVisualStyleBackColor = true;
+            this.MinMoney.Click += new System.EventHandler(this.MinMoney_Click);
             // 
             // FinanceForm
             // 
@@ -118,5 +132,6 @@
         private System.Windows.Forms.Label NalText;
         private System.Windows.Forms.Label NowMoney;
         private System.Windows.Forms.Button AddMoney;
+        private System.Windows.Forms.Button MinMoney;
     }
 }

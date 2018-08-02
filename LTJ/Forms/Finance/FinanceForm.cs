@@ -42,8 +42,15 @@ namespace LTJ
         private void AddMoney_Click(object sender, EventArgs e)
         {
             Forms.FinanceForm.AddMoneyForm addMoneyForm = new Forms.FinanceForm.AddMoneyForm();
-            addMoneyForm.Owner = this;
-            addMoneyForm.ShowDialog();
+            {
+                addMoneyForm.Owner = this;
+                addMoneyForm.ShowDialog();
+                bool result = Core.Core.MBQuest("Хотите записать 10% в Банк?", "Вопрос");
+                if (result)
+                {
+
+                }
+            }
 
         }
 

@@ -53,6 +53,12 @@
     <Compile Include="Forms\Finance\AddMoneyForm.Designer.cs">
       <DependentUpon>AddMoneyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Finance\Bank\ChoiceYachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Finance\Bank\ChoiceYachForm.Designer.cs">
+      <DependentUpon>ChoiceYachForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Finance\FinanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Finance\AddMoneyForm.resx">
       <DependentUpon>AddMoneyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Finance\Bank\ChoiceYachForm.resx">
+      <DependentUpon>ChoiceYachForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Finance\FinanceForm.resx">
       <DependentUpon>FinanceForm.cs</DependentUpon>

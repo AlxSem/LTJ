@@ -17,7 +17,10 @@ namespace LTJ.Core
             XDocument xdoc = new XDocument(new XElement("Finance",
                 new XElement("Have", new XElement("Beznal", 0), new XElement("Nal", 0)),
                 new XElement("Target"),
-                new XElement("Bank", new XElement("BankPropites",new XElement("UAN",0), new XElement("USD",0), new XElement("Reserv",0)), new XElement("Yacheyki")),
+                new XElement("Bank", new XElement("BankPropites",new XElement("UAN",0), new XElement("USD",0), new XElement("Reserv",0)), new XElement("Yacheyki",
+                            new XElement("Yach", new XElement("Name", "AA1"), new XElement("Description","Тумбочка на кухне"), new XElement("Count", 0)),
+                             new XElement("Yach", new XElement("Name", "HC1"), new XElement("Description", "Телефон"), new XElement("Count", 0)),
+                              new XElement("Yach", new XElement("Name", "HC1"), new XElement("Description", "Курточка в кладовке"), new XElement("Count", 0)))),
                 new XElement("History"),
                 new XElement("Comunal"),
                 new XElement("Other", new XElement("Proezd"), new XElement("Eat"), new XElement("Coffee"), new XElement("Vape"))));

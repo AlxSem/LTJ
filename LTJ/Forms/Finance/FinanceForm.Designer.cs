@@ -131,7 +131,7 @@
             // ReservBank
             // 
             this.ReservBank.AutoSize = true;
-            this.ReservBank.Location = new System.Drawing.Point(12, 80);
+            this.ReservBank.Location = new System.Drawing.Point(10, 80);
             this.ReservBank.Name = "ReservBank";
             this.ReservBank.Size = new System.Drawing.Size(62, 13);
             this.ReservBank.TabIndex = 0;

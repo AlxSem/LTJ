@@ -13,5 +13,11 @@ namespace LTJ.Core
         {
             MessageBox.Show(text, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        static public bool MBQuest(string text1, string text2)
+        {
+            DialogResult result = MessageBox.Show(text1, text2, MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) return true;
+            else return false;
+        }
     }
 }

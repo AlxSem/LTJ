@@ -36,10 +36,11 @@
             this.NalText = new System.Windows.Forms.Label();
             this.NowMoney = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ReservBank = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.grnAllBankText = new System.Windows.Forms.Label();
             this.usdBankText = new System.Windows.Forms.Label();
+            this.grnAllBankText = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ReservBank = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +120,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.usdBankText);
             this.panel2.Controls.Add(this.grnAllBankText);
             this.panel2.Controls.Add(this.label1);
@@ -128,23 +130,14 @@
             this.panel2.Size = new System.Drawing.Size(190, 150);
             this.panel2.TabIndex = 2;
             // 
-            // ReservBank
+            // usdBankText
             // 
-            this.ReservBank.AutoSize = true;
-            this.ReservBank.Location = new System.Drawing.Point(10, 80);
-            this.ReservBank.Name = "ReservBank";
-            this.ReservBank.Size = new System.Drawing.Size(62, 13);
-            this.ReservBank.TabIndex = 0;
-            this.ReservBank.Text = "В резерве ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Сейчас денег в банке:";
+            this.usdBankText.AutoSize = true;
+            this.usdBankText.Location = new System.Drawing.Point(10, 55);
+            this.usdBankText.Name = "usdBankText";
+            this.usdBankText.Size = new System.Drawing.Size(64, 13);
+            this.usdBankText.TabIndex = 3;
+            this.usdBankText.Text = "В долларах";
             // 
             // grnAllBankText
             // 
@@ -155,14 +148,33 @@
             this.grnAllBankText.TabIndex = 2;
             this.grnAllBankText.Text = "В гривнах";
             // 
-            // usdBankText
+            // label1
             // 
-            this.usdBankText.AutoSize = true;
-            this.usdBankText.Location = new System.Drawing.Point(10, 55);
-            this.usdBankText.Name = "usdBankText";
-            this.usdBankText.Size = new System.Drawing.Size(64, 13);
-            this.usdBankText.TabIndex = 3;
-            this.usdBankText.Text = "В долларах";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Сейчас денег в банке:";
+            // 
+            // ReservBank
+            // 
+            this.ReservBank.AutoSize = true;
+            this.ReservBank.Location = new System.Drawing.Point(10, 80);
+            this.ReservBank.Name = "ReservBank";
+            this.ReservBank.Size = new System.Drawing.Size(62, 13);
+            this.ReservBank.TabIndex = 0;
+            this.ReservBank.Text = "В резерве ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 32);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FinanceForm
             // 
@@ -196,5 +208,6 @@
         private System.Windows.Forms.Label grnAllBankText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ReservBank;
+        private System.Windows.Forms.Button button1;
     }
 }

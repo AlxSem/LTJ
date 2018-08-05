@@ -19,6 +19,11 @@ namespace LTJ.Forms.Finance.Bank
 
         private void ChoiceYachForm_Load(object sender, EventArgs e)
         {
+            List<string> List = Core.XML.ListYach();
+            foreach(string el in List)
+            {
+                ChoiceYachCB.Items.Add(el);
+            }
 
         }
     }

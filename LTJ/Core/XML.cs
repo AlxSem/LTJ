@@ -101,6 +101,16 @@ namespace LTJ.Core
                 xdoc.Save(Path.FinanceXMLPath());
             }
         }
+        static public List<string> ListYach()
+        {
+            List<string> YachList = new List<string>();
+            XDocument xdoc = XDocument.Load(Path.FinanceXMLPath());
+            foreach(XElement el in xdoc.Element("Finance").Element("Bank").Element("Yacheyki").Elements("Yach"))
+            {
+                YachList.Add(el.Element("Name").Value.ToString());
+            }
+            return YachList;
+        }
         #endregion Достаем данные
         #region История
         static public void AddHistory(string Description, string Note, string wasNal, string thusNal, string wasBeznal, string thusBeznal)

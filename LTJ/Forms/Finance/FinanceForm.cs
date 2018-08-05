@@ -60,5 +60,14 @@ namespace LTJ
             minMoneyForm.Owner = this;
             minMoneyForm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LTJ.Forms.Finance.Bank.ChoiceYachForm choiceYachFoms = new LTJ.Forms.Finance.Bank.ChoiceYachForm();
+            {
+                choiceYachFoms.Owner = this;
+                choiceYachFoms.ShowDialog();
+            }
+        }
     }
 }
